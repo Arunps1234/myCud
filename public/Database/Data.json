@@ -1,0 +1,20 @@
+{
+  "Data": [
+    {
+      "name": "Arun",
+      "age": "23",
+      "phone": "7676345521",
+      "gmail": "arunps@gmail.com",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "name": "Rani",
+      "age": "23",
+      "phone": "99090909090",
+      "gmail": "rani@gmail.com",
+      "gender": "female",
+      "id": 1
+    }
+  ]
+}
