@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import  Axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,13 +8,18 @@ const[name, setName] = useState();
 const[age, setAge] = useState();
 const[phone, setPhone] = useState()
 const[gmail, setGmail] = useState()
+const[gender, SetGender] = useState()
+const [disablebtn, setDisablebtn] = useState(true)
 
 const data ={
     name:name,
     age:age,
     phone:phone,
     gmail:gmail,
+    gender:gender,
 }
+
+
 
 const navigate= useNavigate()
 
@@ -30,6 +35,7 @@ const submitForm = (e)=>{
         }
     )
 }
+
 
     return(
         <div>
@@ -54,9 +60,20 @@ const submitForm = (e)=>{
                     <label>Gmail:</label>
                 <input type="text" className='form-control' value={gmail} onChange={e=>setGmail(e.target.value)} required></input>
 </div>
+<div>
+<label>Select Your Gender :</label>
+<br/>
+    <select value={gender} onChange={e=>SetGender(e.target.value)}>
+        <option selected disabled hidden>Select Your Gender</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+
+
+    </select>
+</div>
 <br/>
 <div>
-    <button className='btn btn-success' style={{width:"100%"}} onClick={submitForm}>Submit</button>
+    <button className='btn btn-success' style={{width:"100%",}} onClick={submitForm} >Submit</button>
 </div>
             </form>
 
