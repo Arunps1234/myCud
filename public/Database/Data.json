@@ -1,20 +1,3 @@
 {
-  "Data": [
-    {
-      "name": "Kumar1",
-      "age": "21",
-      "phone": "7676345521",
-      "gmail": "kumar11@cc.com",
-      "id": 5
-    },
-    {
-      "name": "Ashwini",
-      "age": "22",
-      "phone": "76324878327",
-      "gmail": "ashwini@cc.com",
-      "gender": "Female",
-      "id": 6
-    }
-    
-  ]
+  "Data": []
 }

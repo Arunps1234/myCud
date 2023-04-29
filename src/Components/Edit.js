@@ -15,6 +15,7 @@ const Edit = () =>{
     const[age, setAge]= useState();
     const[phone, setPhone] = useState();
     const[gmail, setGmail] = useState()
+    const[gender, SetGender] = useState()
 
     const[userdata, setUserData] = useState([])
 
@@ -36,6 +37,7 @@ const Edit = () =>{
             setAge(Data.data.age)
             setPhone(Data.data.phone)
             setGmail(Data.data.gmail)
+            SetGender(Data.data.gender)
 
         }).catch(function(){
             console.log("Smoething went wrong")
@@ -77,6 +79,22 @@ const Edit = () =>{
                 <input type="text" className='form-control' value={gmail} onChange={e=>setGmail(e.target.value)}></input>
 </div>
 <br/>
+
+
+<div>
+                    <label>Select Your Gender :</label>
+                    <br />
+                    <select value={gender} onChange={e => SetGender(e.target.value)}>
+                        <option selected disabled hidden>Select Your Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+
+
+                    </select>
+
+</div>
+<br/>
+
 <div>
     <button className='btn btn-success' style={{width:"100%"}} onClick={Editdata}>Edit</button>
 </div>
